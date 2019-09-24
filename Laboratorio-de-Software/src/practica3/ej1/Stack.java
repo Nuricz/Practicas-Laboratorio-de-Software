@@ -6,17 +6,20 @@ import java.util.Iterator;
 /**
  * Stack
  */
-public class Stack implements Iterable {
-    private java.util.ArrayList items = new ArrayList();
+public class Stack {
+
+    private static ArrayList<String> items = new ArrayList<>();
+
     public Stack() {
-        
     }
-    public void push(Object item) {
+
+    public void push(String item) {
         items.add(item);
     }
-    
+
     public Object pop() {
-        return items.isEmpty() ? null : items.remove(0);
+        return !items.isEmpty() ? items.remove(0) : null;
+
     }
 
     public boolean isEmpty() {
@@ -24,26 +27,29 @@ public class Stack implements Iterable {
     }
 
     public void finalize() {
-        
     }
 
-
-    public Iterator iterator(){
-        return new Iterator (){
-
-            int i = 0;
-    
-            @Override
-            public boolean hasNext() {
-                return i < items.size();
-            }
-    
-            @Override
-            public Object next() {
-                return items.get(i++);
-            }
-            
-        };
+    public StackIterator getIterator(){
+        return StackIterator.INSTANCE;
     }
 
+    static class StackIterator implements Iterator<Object> {
+        int cont = 0;
+
+        public static final StackIterator INSTANCE = new StackIterator();
+
+        private StackIterator(){}
+
+
+        @Override
+        public boolean hasNext() {
+            return cont < items.size();
+        }
+
+        @Override
+        public Object next() {
+            return items.get(cont++);
+        }
+
+    }
 }
