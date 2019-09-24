@@ -1,0 +1,21 @@
+4.- ​Indicar si son verdaderas o falsas las siguientes afirmaciones sobre las ​clases anónimas
+    ​y en cada caso justifique su respuesta​:
+    
+    ❏   Se pueden instanciar más allá del punto en donde fueron declaradas.
+
+    Falso
+    
+    ❏   Unos de los usos más comunes de este tipo de clases es la creación de objetosfunción 
+    y procesos ​on the fly​.
+
+    Verdadero
+    
+    ❏   Se puede utilizar el ​instanceof​ siempre y cuando la interfaz de la que deriva la clase 
+    anónima sea de tipo ​marker​.
+
+    Ni idea 
+    
+    ❏   No se puede implementar múltiples interfaces o extender clases e implementar interfaces 
+    al mismo tiempo.
+
+    Verdadero, porque lo dice la teoría, justificación: "Las clases anónimas son limitadas"
