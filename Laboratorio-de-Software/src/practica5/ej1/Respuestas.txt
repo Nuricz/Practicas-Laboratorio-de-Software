@@ -1,0 +1,11 @@
+d) El criterio de orden por defecto no corresponde a ninguno de los campos por lo cual no está
+"ordenada", en base al punto e ordeno la colección luego de pedirla pero solo para imprimirla.
+Podría en el agregar hacer una comparación para que se vaya ordenando en base a algún criterio.
+
+e) Creé 2 clases internas encargadas de comparar nombre y apellido para poder utilizarlas
+con el método sort() de la clase Collection y de esta forma ordenar la colección por nombre y
+apellido.
+
+f) Crearía un colección por cada tipo de objeto, no se comprende muy bien el punto del ejercicio.
+Ya que en una matería no tendria "clientes". Si se refiere a tener varias colecciones de distintas clases
+preferiría separarlas a meter objetos de distintas clases en una misma colección.
