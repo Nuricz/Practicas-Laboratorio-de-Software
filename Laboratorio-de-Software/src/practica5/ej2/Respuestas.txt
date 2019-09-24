@@ -1,0 +1,41 @@
+a)Indicar cual es el resultado de las siguientes operaciones:
+
+i)  Veterinaria <Animal> vet = new Veterinaria <Gato>();
+
+    Tira error:
+    Type mismatch: cannot convert from Veterinaria<Gato> to Veterinaria<Animal>
+
+ii) Veterinaria <Gato> vet = new Veterinaria <Animal>();
+
+    Tire error:
+    Type mismatch: cannot convert from Veterinaria<Animal> to Veterinaria<Gato>
+
+
+iii)Veterinaria <?> vet = new Veterinaria<Gato>();
+    vet.setAnimal(new Gato());
+
+    Tira error:
+    The method setAnimal(capture#1-of ?) in the type 
+    Veterinaria<capture#1-of ?> is not applicable for the arguments (Gato)
+
+iv) Veterinaria vet = new Veterinaria ();
+    vet.setAnimal(new Perro());
+
+    Tira 3 warnings:
+    Veterinaria is a raw type. References to generic type Veterinaria<E> should be parameterized
+   
+    Veterinaria is a raw type. References to generic type Veterinaria<E> should be parameterized
+   
+    Type safety: The method setAnimal(Object) belongs to the raw type Veterinaria. References to generic type 
+    Veterinaria<E> should be parameterized
+    
+v)  Veterinaria vet = new Veterinaria <?>();
+
+    Tira 1 warning y un error:
+    Veterinaria is a raw type. References to generic type Veterinaria<E> should be parameterized
+
+    Cannot instantiate the type Veterinaria<?>
+
+vi) Veterinaria <? extends Animal> vet = new Veterinaria<Gato>();
+
+    No tira ningún error, funciona
