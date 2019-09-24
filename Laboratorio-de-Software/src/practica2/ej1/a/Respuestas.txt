@@ -1,0 +1,5 @@
+a)
+
+Todas las declaraciones de las interfaces son correctas.
+La clase TodosLosColores implementa 2 interfaces donde cada una tiene un atributo
+con el mismo nombre por lo cual cuando esta clase lo utiliza tira el error de que es ambiguo.

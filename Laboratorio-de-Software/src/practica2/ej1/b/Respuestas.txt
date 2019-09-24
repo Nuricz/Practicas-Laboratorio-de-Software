@@ -1,0 +1,13 @@
+La interface InstrumentoMusical no era legal ya que si se define un cuerpo para un método
+este debe ser o static o default. Se solucionó al indicar que era un comportamiento por 
+default
+
+La clase InstrumentoDeViento no era legal ya que el método hacerSonar() tenía una visibilidad
+menor a la que tiene el método en la interfaz InstrumentoMusical. Se solucionó indicando una
+visibilidad public.
+
+¿Cómo podría modificar el método afinar() para evitar realizar
+cambios en las clases que implementan InstrumentoMusical ?
+
+Se responde con mi primera corrección, indicando que tiene un comportamiento por default, 
+entonces las clases que implementen la interfaz heredarán este comportamiento.
