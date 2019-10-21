@@ -75,7 +75,8 @@ public class Mapeador {
             Archivo anotation = clase.getAnnotation(Archivo.class);
                         System.out.println(anotation.name().toString());
 
-            String fileName = anotation.name() != "" ? anotation.name() : clase.getName();
+            String fileName = anotation.name().isEmpty()
+                ? clase.getName() : anotation.name();
             String[] argumentos = {sb.toString(),fileName};
             return Optional.of(argumentos);
         };
