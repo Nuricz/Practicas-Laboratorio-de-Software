@@ -1,4 +1,4 @@
-package practica7;
+package practica7.ej2;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -6,10 +6,11 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * AlmacenarAtributo
+ * Archivo
  */
-@Target(ElementType.FIELD)
+@Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)
-public @interface AlmacenarAtributo {
-
+public @interface Archivo {
+    String name() default "";
+    
 }

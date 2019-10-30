@@ -1,4 +1,4 @@
-package practica7;
+package practica7.ej2;
 
 /**
  * Mapeado

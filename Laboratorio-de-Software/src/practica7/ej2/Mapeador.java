@@ -1,4 +1,4 @@
-package practica7;
+package practica7.ej2;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
+import java.util.Arrays;
 import java.util.Optional;
 
 /**
@@ -57,24 +58,23 @@ public class Mapeador {
             var sb = new StringBuilder();
             sb.append("<nombreClase>");
             sb.append(clase.getName());
-            sb.append("</nombreClase>");
+            sb.append("</nombreClase>\n");
+            System.out.println(Arrays.deepToString(clase.getDeclaredFields()));
             for (Field f : clase.getDeclaredFields()) {
                 if (f.isAnnotationPresent(AlmacenarAtributo.class)) {
                     sb.append("<nombreAtributo>");
                     sb.append(f.getName());
-                    sb.append("</nombreAtributo>");
+                    sb.append("</nombreAtributo>\n");
                     sb.append("<valorAtributo>");
                     String nombreMetodo = "get"+f.getName().substring(0, 1).toUpperCase()
                                             +f.getName().substring(1);
                     Method m = clase.getDeclaredMethod(nombreMetodo);
                     var value = m.invoke(o);
                     sb.append(value.toString());
-                    sb.append("</valorAtributo>");
+                    sb.append("</valorAtributo>\n");
                 }
             }
             Archivo anotation = clase.getAnnotation(Archivo.class);
-                        System.out.println(anotation.name().toString());
-
             String fileName = anotation.name().isEmpty()
                 ? clase.getName() : anotation.name();
             String[] argumentos = {sb.toString(),fileName};
