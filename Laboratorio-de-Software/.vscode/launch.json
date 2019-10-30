@@ -1,0 +1,46 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Test2",
+            "request": "launch",
+            "mainClass": "practica6.ej2.Test2",
+            "projectName": "Laboratorio-de-Software"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Mapeador",
+            "request": "launch",
+            "mainClass": "practica7.ej2.Mapeador",
+            "projectName": "Laboratorio-de-Software"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - TestSobreescritura",
+            "request": "launch",
+            "mainClass": "practica7.ej1.TestSobreescritura",
+            "projectName": "Laboratorio-de-Software"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Mapeador",
+            "request": "launch",
+            "mainClass": "practica7.Mapeador",
+            "projectName": "Laboratorio-de-Software"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - TestFacultad",
+            "request": "launch",
+            "mainClass": "practica4.expresionesLambda.TestFacultad",
+            "projectName": "Laboratorio-de-Software"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - TestPiano",
+            "request": "launch",
+            "mainClass": "practica4.tiposEnumerativos.TestPiano",
+            "projectName": "Laboratorio-de-Software"
+        }
+    ]
+}
