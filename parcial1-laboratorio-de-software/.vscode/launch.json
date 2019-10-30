@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - CatalogosTest",
+            "request": "launch",
+            "mainClass": "app.CatalogosTest",
+            "projectName": "parcial1-laboratorio-de-software"
+        }
+    ]
+}
