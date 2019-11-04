@@ -1,0 +1,6 @@
+Imprime:
+Test3
+Primer try
+Finally del 2º try
+Se capturó la Excepción ex del 1º Primer try
+Finally del 1º try

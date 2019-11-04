@@ -1,0 +1,6 @@
+1) Había .. donde no debían ir. Los borré
+2) Exception Mano is not compatible with throws clause in Partido.penal(). Se agregó al método penal() de la clase Partido el throws a Mano
+3) Exception Lluvia is not compatible with throws clause in Partido.evento(). Se agregó el throws a Lluvia en el método evento() de la clase Partido.
+4) El método evento() en la clase Encuentro está duplicado. Borro el que no captura a Lluvia
+5) Está duplicado el parámetro "e" que se utiliza para las excepciones en el 2do try. Le cambié el nombre por e2
+6) Se ejecuta sin errores ;)
