@@ -1,0 +1,4 @@
+a) Imprime "Testeando: 'Deprecated'"
+
+b) Imprime lo mismo que en a) pero me indica antes de ejecutar que el método está Deprecated
+
