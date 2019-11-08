@@ -1,0 +1,2 @@
+synchronized funciona de tal forma que al entrar un hilo los demás deberán esperar a que el que entró termine su ejecución para poder ejecutarse.
+Hace que se ejecuten secuencialmente los threads
