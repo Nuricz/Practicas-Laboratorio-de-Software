@@ -14,7 +14,7 @@ public class Test2 {
             return 1;
         } finally {
             System.out.println("Va a retornar 2");
-            return 2;
+           // return 2;
         }
 
     }
