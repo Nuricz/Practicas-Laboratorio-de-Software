@@ -1,8 +1,11 @@
 package laboratorio.practica;
 
+import android.content.Intent;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
@@ -33,6 +36,24 @@ public class MainActivity extends AppCompatActivity {
         this.getListView().setChoiceMode(ListView.CHOICE_MODE_SINGLE);
         this.getListView().setAdapter(new MiAdaptadorConIcono(this, values));
 
+        View shareButton = this.findViewById(R.id.fab);
+        shareButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                StringBuilder sb = new StringBuilder();
+                for(RecursoWeb r : values){
+                    sb.append(r.toString());
+                    sb.append('\n');
+                }
+
+                Intent i = new Intent();
+                i.setAction(Intent.ACTION_SEND);
+                i.putExtra(Intent.EXTRA_TEXT,sb.toString());
+                i.setType("text/plain");
+                startActivity(Intent.createChooser(i,null));
+            }
+        });
     }
 
 
