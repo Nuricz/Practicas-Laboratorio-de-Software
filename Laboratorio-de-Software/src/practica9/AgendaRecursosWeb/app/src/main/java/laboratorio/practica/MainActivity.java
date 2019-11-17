@@ -6,6 +6,7 @@ import androidx.appcompat.widget.Toolbar;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import laboratorio.practica.adapters.MiAdaptadorConIcono;
 import laboratorio.practica.modelo.RecursoWeb;
 import laboratorio.practica.modelo.TipoRecurso;
 
@@ -29,8 +30,8 @@ public class MainActivity extends AppCompatActivity {
          };
 
         this.setListView((ListView)this.findViewById(R.id.listaRecursos));
-       this.getListView().setChoiceMode(ListView.CHOICE_MODE_SINGLE);
-       this.getListView().setAdapter(new ArrayAdapter<RecursoWeb>(this,android.R.layout.simple_list_item_single_choice, android.R.id.text1,  values));
+        this.getListView().setChoiceMode(ListView.CHOICE_MODE_SINGLE);
+        this.getListView().setAdapter(new MiAdaptadorConIcono(this, values));
 
     }
 
