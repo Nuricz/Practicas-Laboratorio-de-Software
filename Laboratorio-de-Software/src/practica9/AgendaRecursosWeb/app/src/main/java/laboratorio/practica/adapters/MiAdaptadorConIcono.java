@@ -2,6 +2,8 @@ package laboratorio.practica.adapters;
 
 
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -47,7 +49,7 @@ public class MiAdaptadorConIcono extends ArrayAdapter<RecursoWeb> {
             placeholder = (ViewPlaceholder) convertView.getTag();
         }
 
-        RecursoWeb recurso = values[position];
+        final RecursoWeb recurso = values[position];
         placeholder.texto.setText(recurso.getNombre());
         int icono = android.R.drawable.ic_menu_help;
         switch (recurso.getTipoRecurso()) {
@@ -65,6 +67,17 @@ public class MiAdaptadorConIcono extends ArrayAdapter<RecursoWeb> {
                 break;
         }
         placeholder.imagen.setImageResource(icono);
+
+        convertView.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View view) {
+                Intent i = new Intent();
+                i.setAction(Intent.ACTION_VIEW);
+                i.setData(Uri.parse(recurso.getUrl()));
+                view.getContext().startActivity(i);
+                return false;
+            }
+        });
 
         return convertView;
     }
